@@ -26,11 +26,11 @@ body {
 .flex-row{
     display: flex;
 }
-.nav{
-    
+.nav{    
     padding: 60px 40px ;
     display:flex;
     gap:573px;
+    align-items: center;
 
     
 }
