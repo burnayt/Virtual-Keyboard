@@ -7,22 +7,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body >    
+<body >   
+    <!-- TODO:
+    4. OUR FRIENDS --> 
     <!-- FIRST BLOCK-->
     <div class="background" >
         <div class="container">
-            <div class="nav">
+            <header>
                 <div class="logo">
                     <h1>Cozy House</h1>
                     <p>Shelter for pets in boston</p>
                 </div>
-                <div class="nav-links">
-                    <div>About the shelter</div>
-                    <div>Our pets</div>
-                    <div>Help the shelter</div>
-                    <div>Contacts</div>
+                <div class="nav-links" style="padding-bottom:15px">
+                    <div class="nav-font" style="border-bottom:3px solid #F1CDB3;">
+                         <a href="../pets/index.html">About the shelter</a>
+                        </div>
+                    <div class="nav-font">Our pets</div>
+                    <div class="nav-font"><a href="#help">Help the shelter</a> </div>
+                    <div class="nav-font"><a href="#footer">Contacts</a> </div>
                 </div>
-            </div>
+            </header>
 
             <div class="first-content">
                 <div class="first-content-text">
@@ -34,12 +38,12 @@
                          wide and open heart. He or she will love you more than anybody else in the world, 
                          you will see!
                      </p>
-                    <button>
+                    <button onclick="window.location.href='#our-friends'">
                          Make a friend
                     </button>
                 </div>
 
-                <div>
+                <div style="position:relative; left:45px; top:-20px">
                     <img src="../../assets/images/start-screen-puppy.png" width="698" height="728" alt="Cute puppy">
                 </div>
                     
@@ -51,15 +55,15 @@
     <!-- SECOND BLOCK-->
      
     <div class="odd" style="height:588px">
-        <div class="container flex-row">
-            <div style="margin: 80px 120px 215px;">
+        <div class="container flex-row" style="justify-content:center;">
+            <div style="position:relative; top: 85px;left:-60px">
                 <img src="../../assets/images/about-pets.png" alt="cat and dog">
             </div >
-            <div style="margin: 94px 0px 0px 0px;">
-                <h2 style="width:370px">
+            <div style="position:relative; top:60px; left:60px;">
+                <h3 style="width:370px">
                     About the shelter “Cozy House”
-                </h2>
-                <p style="width:430px">
+                </h3>
+                <p style="width:430px; position:relative; top:-10px; ">
                     Currently we have 121 dogs and 342 cats on our hands
                     and statistics show that only 20% of them will find a
                     family. The others will continue to live with us and 
@@ -79,56 +83,56 @@
 
     <div class="even" style="height:877px">
         <div class="container">
-            <div style="padding: 80px 40px 100px 40px; display:flex; flex-direction: column; align-items: center;" >
-                <h3 style="width:400px;">Our friends who
-                    are looking for a house
+            <div style="padding: 45px 0 0 0; display:flex; flex-direction: column; align-items: center;" >
+                <h3 style="width:400px;">Our friends who<br>
+                    are looking for a house <a name="our-friends"></a>
                 </h3>
-                <div style="padding: 80px; display:flex; justify-content: center;">
-                    <button class="arrow">
+                <div style="padding: 20px; display:flex;  ">
+                    <button class="arrow" style="position:relative; left:-140px; top:5px">
                         &larr;
                     </button>
 
                     <div class="card-container">
 
-                        <div class="card" style="">
+                        <div class="card" style="position: relative; left:-90px">
                             <img src="../../assets/images/pets/pets-katrine.png" alt="Katrine cat">
-                            <p style="">
+                            <p style="position: relative; top:10px">
                                 Katrine
                             </p>
-                            <button style="">
+                            <button style="position: relative; top:-18px">
                                 Learn More
                            </button>
                         </div>
 
                         <div class="card" style="">
                             <img src="../../assets/images/pets/pets-jennifer.png" alt="Jennifer">
-                            <p style="">
+                            <p style="position: relative; top:10px">
                                 Jennifer
                             </p>
-                            <button style="">
+                            <button style="position: relative; top:-17px">
                                 Learn More
                            </button>
                         </div>
 
-                        <div class="card" style="">
+                        <div class="card" style="position: relative; right:-90px">
                             <img src="../../assets/images/pets/pets-woody.png" alt="Woody">
-                            <p style="">
+                            <p style="position: relative; top:10px">
                                 Woody
                             </p>
-                            <button style="">
+                            <button style="position: relative; top:-17px">
                                 Learn More
                            </button>
                         </div>
                     </div>
 
 
-                    <button class="arrow">
+                    <button class="arrow" style="position:relative; left:140px; top:5px">
                         &rarr;
                     </button>
 
                 </div>
-                <button style="">
-                    Learn More
+                <button class="our-friend-last-button"style="position: relative; top:10px; width:250px">
+                    Get to know the rest
                </button>
             </div>
                 
@@ -141,59 +145,68 @@
 
     <div class="odd" style="height:611px">
         <div class="container">
-            <h3>
-                How you can help our shelter
+            <h3 style="text-align:center; margin-top:80px;">
+                How you can help<br> our shelter <a name="help"></a>
             </h3>
             <div class="icon-list" style="display:flex; justify-content:center; width: 1026px; flex-wrap: wrap;">
                 <div>
-                    <img src="../../assets/images/icons/icon-pet-food.svg" style="width:60; height:60" alt="">
-                    <p>
+                    <img style="position: relative; top:-20px; left:20px"
+                     src="../../assets/images/icons/icon-pet-food.svg" style="width:60; height:60" alt="">
+                    <p style="position: relative; top:-60px; left:65px">
                         Pet food
                     </p>
                 </div>
                 <div>
-                    <img src="../../assets/images/icons/transportation.svg" style="width:61; height:60" alt="">
-                    <p>
+                    <img style="position: relative; top:-20px; left:70px"
+                    src="../../assets/images/icons/transportation.svg" style="width:61; height:60" alt="">
+                    <p style="position: relative; top:-60px; left:80px">
                         Transportation
                     </p>
                 </div>
                 <div>
-                    <img src="../../assets/images/icons/toys.svg" style="width:60; height:60" alt="">
-                    <p>
+                    <img style="position: relative; top:-20px; left:120px"
+                     src="../../assets/images/icons/toys.svg" style="width:60; height:60" alt="">
+                    <p style="position: relative; top:-60px; left:180px">
                         Toys
                     </p>    
                 </div>
                 <div>
-                    <img src="../../assets/images/icons/bowls-and-cups.svg" style="width:60; height:60" alt="">
-                    <p>
+                    <img style="position: relative; top:-20px; left:160px"
+                     src="../../assets/images/icons/bowls-and-cups.svg" style="width:60; height:60" alt="">
+                    <p style="position: relative; top:-60px; left:180px">
                         Bowls and cups
                     </p>
                 </div>
                 <div>
-                    <img src="../../assets/images/icons/icon-shampoos.svg" style="width:60; height:60" alt="">
-                    <p>Shampoos</p>
+                    <img style="position: relative; top:-20px; left:230px"
+                     src="../../assets/images/icons/icon-shampoos.svg" style="width:60; height:60" alt="">
+                    <p style="position: relative; top:-60px; left:270px">Shampoos</p>
                 </div>
                 <div>
-                    <img src="../../assets/images/icons/icon-vitamins.svg" style="width:60; height:60" alt="">
-                    <p>
+                    <img style="position: relative; top:-70px; left:10px"
+                     src="../../assets/images/icons/icon-vitamins.svg" style="width:60; height:60" alt="">
+                    <p style="position: relative; top:-110px; left:55px">
                         Vitamins
                     </p>
                 </div>
                 <div>
-                    <img src="../../assets/images/icons/icon-medicines.svg" style="width:60; height:60" alt="">
-                    <p>
+                    <img style="position: relative; top:-70px; left:50px"
+                    src="../../assets/images/icons/icon-medicines.svg" style="width:60; height:60" alt="">
+                    <p style="position: relative; top:-110px; left:80px">
                         Medicines
                     </p>
                 </div>
                 <div>
-                    <img src="../../assets/images/icons/icon-collars-leashes.svg" style="width:60; height:60" alt="">
-                    <p>
+                    <img style="position: relative; top:-70px; left:120px"
+                    src="../../assets/images/icons/icon-collars-leashes.svg" style="width:60; height:60" alt="">
+                    <p style="position: relative; top:-110px; left:130px">
                         Collars/leashes
                     </p>
                 </div>
                 <div>
-                    <img src="../../assets/images/icons/icon-sleeping-area.svg" style="width:60; height:60" alt="">
-                    <p>
+                    <img style="position: relative; top:-70px; left:220px"
+                     src="../../assets/images/icons/icon-sleeping-area.svg" style="width:60; height:60" alt="">
+                    <p style="position: relative; top:-110px; left:230px">
                         Sleeping areas
                     </p>
                 </div>
@@ -208,15 +221,15 @@
 
     <!-- 5 BLOCK-->
      
-    <div class="even" style="height:462px; padding-top:80px;">
+    <div class="even fifth" style="height:375px; padding-top:10px; ">
         <div class="container">
-            <div style="display:flex; ">
-                <img src="../../assets/images/donation-dog.png" style="width:505px; height:261" alt="dog">
-                <div style="width:380px">
+            <div style="display:flex; position:relative; left:180px ">
+                <img src="../../assets/images/donation-dog.png" style="width:505px; height:261px" alt="dog">
+                <div style="width:380px; position:relative; top:-45px; left:35px">
                     <h3>
-                        You can also make a donation
+                        You can also<br> make a donation
                     </h3>
-                    <p>
+                    <p style="width:380px; position:relative; top:-15px;">
                         Name of the bank / Type of bank account
                     </p>
                     <div style="background: #F1CDB3; border-radius: 9px;">
@@ -240,33 +253,33 @@
 
     <div class="last">
         <div class="container">
-            <div style="padding:40px; display:flex;">
+            <div style="padding:100px 0 0 40px; display:flex; position:relative; top:-80px;">
                 <div class="contacts">
-                    <h3>
-                        For questions and suggestions
+                    <h3 style="width:300px">
+                        For questions<br> and suggestions <a name="footer"></a>
                     </h3>
-                    <p>
-                        <img src="../../assets/images/mail.svg" alt="">
-                        <span style="">email@shelter.com</span>
+                    <p >
+                        <img  style="position: relative; left:-34px; top:11px" src="../../assets/images/mail.svg" alt="">
+                        <span style="position: relative; left:-15px; top:0px">email@shelter.com</span>
                     </p>
                     <p>
-                        <img src="../../assets/images/phone.svg" alt="">
-                        <span>+13 674 567 75 54</span>
+                        <img style="position: relative; left:-35px; top:30px" src="../../assets/images/phone.svg" alt="">
+                        <span style="position: relative; left:-20px; top:15px">+13 674 567 75 54</span>
                     </p>
                 </div>
 
-                <div class="locations" style="display:flex; flex-direction: column;">
-                    <h3>We are waiting for your visit</h3>
-                    <div>
+                <div class="locations" style="display:flex; flex-direction: column; margin:0 0 0 140px">
+                    <h3>We are waiting <br>for your visit</h3>
+                    <div style="position: relative; left:-39px; top:5px; width:350px">
                         <img src="../../assets/images/pin.svg" alt="">
                         <span>1 Central Street, Boston (entrance from the store)</span>
                     </div>
                     <div>
-                        <img src="../../assets/images/pin.svg" alt="">
-                        <span>18 South Park, London </span>
+                        <img style="position: relative; left:-55px; top:10px" src="../../assets/images/pin.svg" alt="">
+                        <span style="position: relative; left:-45px; top:10px">18 South Park, London </span>
                     </div>
                 </div>
-                <img src="../../assets/images/footer-puppy.png" alt="">
+                <img style="position: relative; left:100px; top:25px" src="../../assets/images/footer-puppy.png" alt="">
             </div>
         </div>
     </div>

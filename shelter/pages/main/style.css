@@ -2,11 +2,230 @@ body {
     margin: 0;
     padding: 0;    
 }
+
+a {
+    color:inherit;
+    text-decoration:inherit;
+}
+h3{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+    text-align: left;
+}
+.odd p{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #4C4C4C;
+    text-align:left;
+}
+.even h3{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    /* or 45px */    
+    text-align: center;
+    letter-spacing: 0.06em;
+
+/* color-dark-l */
+
+color: #545454;
+}
 .background{
-    background: url('../../assets/images/noise_transparent@2x.png'),          linear-gradient(45deg, #5B483A,#262425);
+    background: url('../../assets/images/noise_transparent@2x.png'),
+                linear-gradient(45deg, #5B483A,#262425);
     height: 908px;
-    
-    
+}
+.logo h1{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    /* or 35px */    
+    letter-spacing: 0.06em;
+    /* color-primary */
+    color: #F1CDB3;
+    margin:0px;
+}
+.card p{
+    /* pets-card-title */
+font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.06em;
+/* color-dark-l */
+color: #545454;
+}
+
+.card button {
+    background-color: #F1CDB3;
+    border-radius: 100px;
+    width:207px;
+    height:52px;
+    margin: 40px 0px 0px 0px;
+}
+.card-container button{
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    background-color: #F6F6F6;
+    width:190px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    /* identical to box height, or 22px */
+
+    letter-spacing: 0.06em;
+
+    /* color-dark-3xl */
+
+    color: #292929;
+}
+.our-friend-last-button{
+    background-color: #F1CDB3;
+    border-radius: 100px;    
+    width:207px;
+    height:52px;
+    margin: 35px 0px 0px 0px;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;    
+
+    letter-spacing: 0.06em;
+    color: #292929;
+    border-color:transparent;
+}
+.icon-list p {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+/* identical to box height, or 23px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+.logo p
+{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    /* identical to box height */    
+    letter-spacing: 0.1em;
+    /* color-light-xl */
+    color: #FFFFFF;   
+}
+.first-content-text h2{
+    /* h2 */
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+.first-content-text{
+    text-align: left;
+    padding: 110px 0px 0px 40px;    
+
+}
+
+.first-content-text p{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #CDCDCD;
+}
+.fifth h3{
+    font-family: 'Georgia';
+    font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+/* or 45px */
+
+letter-spacing: 0.06em;
+text-align:left;
+/* color-dark-l */
+
+color: #545454;
+
+}
+.fifth p{
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 110%;
+/* identical to box height, or 17px */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.06em;
+
+/* color-dark-l */
+
+color: #545454;
+}
+.fifth h4{
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+/* identical to box height, or 23px */
+
+letter-spacing: 0.06em;
+
+/* color-dark-l */
+
+color: #545454;
+}
+.first-content-text button {
+    background-color: #F1CDB3;
+    border-radius: 100px;    
+    width:207px;
+    height:52px;
+    margin: 35px 0px 0px 0px;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;    
+
+    letter-spacing: 0.06em;
+    color: #292929;
+    border-color:transparent;
+}
+.first-content-text button:hover {
+    background-color: #f7e3d4;
 }
 .odd{
     background: #FFFFFF;
@@ -26,6 +245,13 @@ body {
 .flex-row{
     display: flex;
 }
+header
+{    
+    padding: 60px 40px ;
+    display:flex;
+    gap:573px;
+    align-items: center;    
+}
 .nav{    
     padding: 60px 40px ;
     display:flex;
@@ -34,8 +260,50 @@ body {
 
     
 }
+.last h3{
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+/* or 45px */
+
+letter-spacing: 0.06em;
+
+/* color-light-xl */
+
+color: #FFFFFF;
+}
+.last span{
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+/* identical to box height, or 23px */
+
+letter-spacing: 0.06em;
+
+/* color-primary */
+
+color: #F1CDB3;
+
+}
+.nav-font{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #FAFAFA;
+}
+.nav-font a{
+    color:inherit;
+    text-decoration:inherit;
+}
 .nav-links{
     display:flex;
+    align-items:center;
     gap:35px;
 }
 .nav-links div{
@@ -44,17 +312,8 @@ body {
 .first-content{
     display:flex;
 }
-.first-content-text{
-    padding: 163px 40px 0px 42px
 
-}
-.card button {
-    background-color: #F1CDB3;
-    border-radius: 100px;
-    width:207px;
-    height:52px;
-    margin: 40px 0px 0px 0px;
-}
+
 .arrow {       
     width: 52px;
     height: 52px;        
@@ -66,13 +325,8 @@ body {
     align-self: center;
     
 }
-.first-content-text button {
-    background-color: #F1CDB3;
-    border-radius: 100px;
-    width:207px;
-    height:52px;
-    margin: 40px 0px 0px 0px;
-}
+
+
 .card-container{
     display: flex;
 }
