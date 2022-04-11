@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;    
+}
+.container{
+    text-align:center;
+    width:1280px;
+    margin: 0 auto;
+}
+.card{
+    width:270px;
+    height:435px;
+    text-align:center
+}
+
+
+header{
+    position: sticky;
+    display: flex; 
+    gap: 573px;
+    align-items: center;
+    background: #FFFFFF;
+}
+
+.nav-links{
+    display:flex;
+    justify-content: end;
+    gap:35px;    
+}
+
+.footer-background{
+    background: url('../../assets/images/noise_transparent@2x.png'),          linear-gradient(45deg, #5B483A,#262425);
+    height: 350px;
+    
+    
+}
+
