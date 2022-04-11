@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;    
+}
+.background{
+    background: url('../../assets/images/noise_transparent@2x.png'),          linear-gradient(45deg, #5B483A,#262425);
+    height: 908px;
+    
+    
+}
+.odd{
+    background: #FFFFFF;
+}
+.even{
+    background: #F6F6F6;
+}
+.last{
+    background: url('../../assets/images/noise_transparent@2x.png'),          linear-gradient(45deg, #5B483A,#262425);
+    height: 350px;
+}
+.container{
+    text-align:center;
+    width:1280px;
+    margin: 0 auto;
+}
+.flex-row{
+    display: flex;
+}
+.nav{
+    
+    padding: 60px 40px ;
+    display:flex;
+    gap:573px;
+
+    
+}
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+.nav-links div{
+    justify-self:end ;
+}
+.first-content{
+    display:flex;
+}
+.first-content-text{
+    padding: 163px 40px 0px 42px
+
+}
+.card button {
+    background-color: #F1CDB3;
+    border-radius: 100px;
+    width:207px;
+    height:52px;
+    margin: 40px 0px 0px 0px;
+}
+.arrow {       
+    width: 52px;
+    height: 52px;        
+    
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+
+    align-self: center;
+    
+}
+.first-content-text button {
+    background-color: #F1CDB3;
+    border-radius: 100px;
+    width:207px;
+    height:52px;
+    margin: 40px 0px 0px 0px;
+}
+.card-container{
+    display: flex;
+}
+
+.card{
+    width:270px;
+    height:435px;
+    text-align:center
+}
+
+.icon-list img{
+    margin: 45px 60px;
+}

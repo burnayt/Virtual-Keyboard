@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;    
+}
+
+.footer-background{
+    background: url('../../assets/images/noise_transparent@2x.png'),          linear-gradient(45deg, #5B483A,#262425);
+    height: 908px;
+    
+    
+}
+
+.container{
+    text-align:center;
+    width:1280px;
+    margin: 0 auto;
+}
