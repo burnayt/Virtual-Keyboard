@@ -673,6 +673,524 @@ h1 {
   }
 }
 
+.help-content {
+  margin: 80px 40px 100px 40px;
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1279px) {
+  .help-content {
+    width: 768px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .help-content {
+    margin-top: 40px;
+    width: 320px;
+    margin-bottom: 40px;
+  }
+}
+
+.help-content h3 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 767px) {
+  .help-content h3 {
+    margin-bottom: 43px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+  }
+}
+
+.help-content .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1026px;
+  row-gap: 50px;
+  -webkit-column-gap: 160px;
+          column-gap: 160px;
+}
+
+@media (max-width: 1279px) {
+  .help-content .list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 630px;
+  }
+}
+
+@media (max-width: 767px) {
+  .help-content .list {
+    width: 290px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 100px;
+            column-gap: 100px;
+    row-gap: 25px;
+  }
+}
+
+.help-content .list .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+}
+
+@media (max-width: 767px) {
+  .help-content .list .list-item img {
+    width: 45px;
+  }
+}
+
+.help-content .list .list-item h4 {
+  margin-top: 30px;
+  width: 160px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+@media (max-width: 767px) {
+  .help-content .list .list-item h4 {
+    width: 120px;
+    /* h5 */
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    /* color-dark-l */
+    color: #545454;
+  }
+}
+
+.donation-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  margin: 85px 182px 120px 183px;
+}
+
+@media (max-width: 1279px) {
+  .donation-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 0px;
+    margin-left: 00px;
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 767px) {
+  .donation-content {
+    margin-top: 40px;
+    margin-left: 0px;
+    margin-bottom: 65px;
+  }
+}
+
+.donation-content img {
+  position: relative;
+  top: 15px;
+  display: block;
+}
+
+@media (max-width: 1279px) {
+  .donation-content img {
+    top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .donation-content img {
+    width: 260px;
+    top: 15px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .donation-content .img-div {
+    -webkit-box-ordinal-group: 16;
+        -ms-flex-order: 15;
+            order: 15;
+  }
+}
+
+@media (max-width: 1279px) {
+  .donation-content .content {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .donation-content .content {
+    margin-left: 00px;
+  }
+}
+
+.donation-content h3 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+@media (max-width: 767px) {
+  .donation-content h3 {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+  }
+}
+
+.donation-content h5 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+@media (max-width: 767px) {
+  .donation-content h5 {
+    width: 273px;
+    margin-left: 6px;
+    margin-top: 24px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 160%;
+    color: #545454;
+  }
+}
+
+.donation-content p {
+  font-family: 'Arial';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  /* or 150% */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #B2B2B2;
+  /* color-dark-m */
+}
+
+@media (max-width: 1279px) {
+  .donation-content p {
+    width: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .donation-content p {
+    margin-left: 5px;
+    width: 280px;
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: justify;
+    /* color-dark-m */
+    color: #B2B2B2;
+  }
+}
+
+.donation-content button {
+  width: 349px;
+  height: 43px;
+  background: #F1CDB3;
+  border-radius: 9px;
+  border-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1279px) {
+  .donation-content button {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .donation-content button {
+    width: 281px;
+    margin-left: 5px;
+  }
+}
+
+.donation-content button p {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-right: 10px;
+}
+
+@media (max-width: 1279px) {
+  .donation-content button p {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .donation-content button p {
+    /* h5 */
+    width: 230px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    /* color-dark-l */
+    color: #545454;
+  }
+}
+
+.donation-content button img {
+  position: relative;
+  top: -3px;
+  left: 13px;
+}
+
+@media (max-width: 767px) {
+  .donation-content button img {
+    width: 30px;
+  }
+}
+
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 55px;
+  gap: 165px;
+}
+
+@media (max-width: 1279px) {
+  .footer-content {
+    gap: 55px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-content {
+    padding-top: 0px;
+  }
+}
+
+.footer-content h3 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+@media (max-width: 1279px) {
+  .footer-content h3 {
+    margin-top: -15px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-content h3 {
+    /* h3-mobile */
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    /* or 32px */
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+}
+
+.footer-content span {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+}
+
+.footer-content .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 40px;
+  gap: 60px;
+}
+
+.footer-content .contacts .sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 40px;
+  margin-top: -20px;
+}
+
+@media (max-width: 1279px) {
+  .footer-content .contacts h3 {
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-left: -55px;
+    width: 320px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .footer-content .contacts .mail {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .footer-content .contacts .tel {
+    margin-left: 25px;
+  }
+}
+
+.footer-content .locations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.footer-content .locations .loc1 {
+  margin-top: 20px;
+}
+
+.footer-content .footer-img {
+  position: relative;
+  top: -15px;
+  left: 20px;
+}
+
+@media (max-width: 1279px) {
+  .footer-content .footer-img {
+    top: 0px;
+    left: 240px;
+  }
+}
+
 @media (max-width: 1279px) {
   .none-less-1280 {
     display: none;
