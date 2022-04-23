@@ -1065,43 +1065,13 @@ h1 {
     gap: 55px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding-top: 40px;
   }
 }
 
 @media (max-width: 767px) {
   .footer-content {
     padding-top: 0px;
-  }
-}
-
-.footer-content h3 {
-  font-family: 'Georgia';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: #FFFFFF;
-}
-
-@media (max-width: 1279px) {
-  .footer-content h3 {
-    margin-top: -15px;
-    width: 300px;
-  }
-}
-
-@media (max-width: 767px) {
-  .footer-content h3 {
-    /* h3-mobile */
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 130%;
-    /* or 32px */
-    text-align: center;
-    letter-spacing: 0.06em;
   }
 }
 
@@ -1127,6 +1097,12 @@ h1 {
   gap: 60px;
 }
 
+@media (max-width: 1279px) {
+  .footer-content .contacts {
+    margin-left: 65px;
+  }
+}
+
 .footer-content .contacts .sub {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1142,12 +1118,27 @@ h1 {
   margin-top: -20px;
 }
 
-@media (max-width: 1279px) {
+.footer-content .contacts h3 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
   .footer-content .contacts h3 {
-    margin-left: 15px;
-    margin-top: 20px;
-    margin-left: -55px;
-    width: 320px;
+    /* h3-mobile */
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    /* or 32px */
+    text-align: center;
+    letter-spacing: 0.06em;
   }
 }
 
@@ -1174,6 +1165,30 @@ h1 {
   gap: 15px;
 }
 
+.footer-content .locations h3 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+  .footer-content .locations h3 {
+    /* h3-mobile */
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    /* or 32px */
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+}
+
 .footer-content .locations .loc1 {
   margin-top: 20px;
 }
@@ -1188,6 +1203,15 @@ h1 {
   .footer-content .footer-img {
     top: 0px;
     left: 240px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-content .footer-img {
+    top: -25px;
+    left: 25px;
+    width: 260px;
+    height: 269px;
   }
 }
 
