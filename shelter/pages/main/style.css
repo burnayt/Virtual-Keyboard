@@ -64,10 +64,11 @@ header {
 
 @media (max-width: 767px) {
   header {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: flex-around;
+        -ms-flex-pack: flex-around;
+            justify-content: flex-around;
     gap: 40px;
+    margin-right: 50px;
   }
 }
 
@@ -126,22 +127,90 @@ header .logo p {
   }
 }
 
-header .burger {
+header .burger-icon {
   display: none;
+  cursor: pointer;
+  z-index: 100;
   width: 30px;
   height: 22px;
   padding-top: 15px;
+  -webkit-transition: -webkit-transform .25s;
+  transition: -webkit-transform .25s;
+  transition: transform .25s;
+  transition: transform .25s, -webkit-transform .25s;
 }
 
-header .burger div {
+header .burger-icon div {
   width: 100%;
   border: 1px solid #F1CDB3;
 }
 
 @media (max-width: 767px) {
-  header .burger {
+  header .burger-icon {
     display: block;
   }
+}
+
+.rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.move-left {
+  -webkit-transform: translate(-320px);
+          transform: translate(-320px);
+  top: 0px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.burger-panel {
+  background: #292929;
+  display: fixed;
+  width: 320px;
+  height: 100%;
+  position: fixed;
+  z-index: 90;
+  -webkit-transition: -webkit-transform .25s;
+  transition: -webkit-transform .25s;
+  transition: transform .25s;
+  transition: transform .25s, -webkit-transform .25s;
+}
+
+.burger-panel .logo {
+  margin: 30px 126px 158px 10px;
+}
+
+.burger-panel .logo h1 {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.burger-panel .menu {
+  text-align: center;
+}
+
+.burger-panel .menu p {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 160%;
+  color: #FAFAFA;
+}
+
+.burger-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 41, 41, 0.6);
+}
+
+.visible {
+  display: block;
 }
 
 .start-screen {
@@ -1065,6 +1134,7 @@ h1 {
     gap: 55px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    width: 708px;
     padding-top: 40px;
   }
 }
@@ -1072,6 +1142,7 @@ h1 {
 @media (max-width: 767px) {
   .footer-content {
     padding-top: 0px;
+    width: 300px;
   }
 }
 
