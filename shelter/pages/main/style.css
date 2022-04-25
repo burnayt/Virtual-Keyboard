@@ -634,6 +634,7 @@ h1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 100px;
+  cursor: pointer;
 }
 
 .pets-content .slider .lt-arrow {

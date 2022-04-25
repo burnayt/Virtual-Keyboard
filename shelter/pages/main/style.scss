@@ -488,13 +488,16 @@ h1{
         }
         .arrow{
             align-self: center;
+            
             button{
                 width: 52px;
                 height: 52px;
                 border: 2px solid #F1CDB3;
                 box-sizing: border-box;
-                border-radius: 100px;                
+                border-radius: 100px;    
+                cursor: pointer;
             }
+            
         }
         .lt-arrow{
             position: relative;
