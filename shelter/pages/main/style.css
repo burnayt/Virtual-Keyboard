@@ -64,10 +64,11 @@ header {
 
 @media (max-width: 767px) {
   header {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: flex-around;
+        -ms-flex-pack: flex-around;
+            justify-content: flex-around;
     gap: 40px;
+    margin-right: 50px;
   }
 }
 
@@ -126,22 +127,90 @@ header .logo p {
   }
 }
 
-header .burger {
+header .burger-icon {
   display: none;
+  cursor: pointer;
+  z-index: 100;
   width: 30px;
   height: 22px;
   padding-top: 15px;
+  -webkit-transition: -webkit-transform .25s;
+  transition: -webkit-transform .25s;
+  transition: transform .25s;
+  transition: transform .25s, -webkit-transform .25s;
 }
 
-header .burger div {
+header .burger-icon div {
   width: 100%;
   border: 1px solid #F1CDB3;
 }
 
 @media (max-width: 767px) {
-  header .burger {
+  header .burger-icon {
     display: block;
   }
+}
+
+.rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.move-left {
+  -webkit-transform: translate(-320px);
+          transform: translate(-320px);
+  top: 0px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.burger-panel {
+  background: #292929;
+  display: fixed;
+  width: 320px;
+  height: 100%;
+  position: fixed;
+  z-index: 90;
+  -webkit-transition: -webkit-transform .25s;
+  transition: -webkit-transform .25s;
+  transition: transform .25s;
+  transition: transform .25s, -webkit-transform .25s;
+}
+
+.burger-panel .logo {
+  margin: 30px 126px 158px 10px;
+}
+
+.burger-panel .logo h1 {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.burger-panel .menu {
+  text-align: center;
+}
+
+.burger-panel .menu p {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 160%;
+  color: #FAFAFA;
+}
+
+.burger-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 41, 41, 0.6);
+}
+
+.visible {
+  display: block;
 }
 
 .start-screen {
@@ -565,6 +634,7 @@ h1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 100px;
+  cursor: pointer;
 }
 
 .pets-content .slider .lt-arrow {
@@ -1065,43 +1135,15 @@ h1 {
     gap: 55px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    width: 708px;
+    padding-top: 40px;
   }
 }
 
 @media (max-width: 767px) {
   .footer-content {
     padding-top: 0px;
-  }
-}
-
-.footer-content h3 {
-  font-family: 'Georgia';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: #FFFFFF;
-}
-
-@media (max-width: 1279px) {
-  .footer-content h3 {
-    margin-top: -15px;
     width: 300px;
-  }
-}
-
-@media (max-width: 767px) {
-  .footer-content h3 {
-    /* h3-mobile */
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 130%;
-    /* or 32px */
-    text-align: center;
-    letter-spacing: 0.06em;
   }
 }
 
@@ -1127,6 +1169,12 @@ h1 {
   gap: 60px;
 }
 
+@media (max-width: 1279px) {
+  .footer-content .contacts {
+    margin-left: 65px;
+  }
+}
+
 .footer-content .contacts .sub {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1142,12 +1190,27 @@ h1 {
   margin-top: -20px;
 }
 
-@media (max-width: 1279px) {
+.footer-content .contacts h3 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
   .footer-content .contacts h3 {
-    margin-left: 15px;
-    margin-top: 20px;
-    margin-left: -55px;
-    width: 320px;
+    /* h3-mobile */
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    /* or 32px */
+    text-align: center;
+    letter-spacing: 0.06em;
   }
 }
 
@@ -1174,6 +1237,30 @@ h1 {
   gap: 15px;
 }
 
+.footer-content .locations h3 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+  .footer-content .locations h3 {
+    /* h3-mobile */
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    /* or 32px */
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+}
+
 .footer-content .locations .loc1 {
   margin-top: 20px;
 }
@@ -1188,6 +1275,15 @@ h1 {
   .footer-content .footer-img {
     top: 0px;
     left: 240px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-content .footer-img {
+    top: -25px;
+    left: 25px;
+    width: 260px;
+    height: 269px;
   }
 }
 
