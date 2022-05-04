@@ -665,6 +665,79 @@ h1 {
   }
 }
 
+.pets-content .slider .card-container-wrapper {
+  overflow: hidden;
+  width: 870px;
+}
+
+@media (max-width: 1279px) {
+  .pets-content .slider .card-container-wrapper {
+    width: 708px;
+  }
+}
+
+.pets-content .slider .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(3*870px);
+  position: relative;
+  gap: 0px;
+  left: -870px;
+}
+
+@media (max-width: 1279px) {
+  .pets-content .slider .card-container {
+    width: 708px;
+  }
+}
+
+.pets-content .slider .card-container .left-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 35px;
+}
+
+.pets-content .slider .card-container .center-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 35px;
+}
+
+.pets-content .slider .card-container .right-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 35px;
+}
+
+.pets-content .slider .move {
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes move {
+  from {
+    left: -850px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes move {
+  from {
+    left: -850px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
 .pets-content .slider .card {
   display: -webkit-box;
   display: -ms-flexbox;
