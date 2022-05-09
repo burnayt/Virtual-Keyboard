@@ -1,3 +1,354 @@
+class KeyboardRows {
+    constructor(keyboard){
+        this.keyboard = keyboard;
+    }
+    createFirstRow(){
+        const row1 = document.createElement('div');
+        row1.classList.add('flex-row');
+        this.keyboard.append(row1);
+        for (let i = 0; i < 14; i++) {
+            const button = document.createElement('div');
+            const content = document.createElement('div');
+        
+            if (i == 0) {
+                button.dataset.key = '`';
+                button.dataset.alt = enAltString1[i];
+                button.dataset.ru = 'ё';
+                button.dataset.ruAlt = 'Ё';
+                button.dataset.cmd = false;
+                button.dataset.mod = 'shift';
+                button.dataset.ruMod = 'Caps';
+            } else if (i < 10) {
+                //button.innerText = i + ' ';
+                button.dataset.key = i + '';
+                button.dataset.alt = enAltString1[i];
+                button.dataset.ru = i + '';
+                button.dataset.ruAlt = ruAltString1[i];
+                button.dataset.cmd = false;
+                button.dataset.mod = 'shift';
+            } else if (i == 10) {
+                button.dataset.key = 0;
+                button.dataset.ru = 0;
+                button.dataset.alt = enAltString1[i];
+                button.dataset.ruAlt = ruAltString1[i]
+                button.dataset.cmd = false;
+                button.dataset.mod = 'shift';
+            } else if (i == 11) {
+                button.dataset.key = '-';
+                button.dataset.ru = '-';
+                button.dataset.alt = enAltString1[i];
+                button.dataset.ruAlt = ruAltString1[i];
+                button.dataset.cmd = false;
+                button.dataset.mod = 'shift';
+            } else if (i == 12) {
+                button.dataset.key = '=';
+                button.dataset.ru = '=';
+                button.dataset.alt = enAltString1[i];
+                button.dataset.ruAlt = ruAltString1[i]; // 
+                button.dataset.cmd = false;
+                button.dataset.mod = 'shift';
+            } else {
+                button.dataset.key = 'Backspace'
+                button.dataset.alt = 'Backspace'
+                button.dataset.ru = 'Backspace'
+                button.dataset.ruAlt = 'Backspace'
+                button.dataset.cmd = true;
+                button.dataset.mod = false;
+        
+                button.classList.add('double-btn');
+            }
+        
+            button.append(content)
+        
+            button.classList.add('button');
+            row1.append(button);
+        }
+        return row1;
+    }
+    createSecondRow(){
+        const row2 = document.createElement('div');
+        row2.classList.add('flex-row');
+        this.keyboard.append(row2);
+        for (let i = 0; i < 15; i++) {
+            const button = document.createElement('div');
+            const content = document.createElement('div');
+        
+            if (i == 0) {
+                button.dataset.key = 'Tab';
+                button.dataset.alt = 'Tab';
+                button.dataset.ru = 'Tab';
+                button.dataset.ruAlt = 'Tab';
+                button.dataset.cmd = true;
+                button.dataset.mod = false;
+            } else if (i < 11) {
+                //button.innerText = i + ' ';
+                button.dataset.key = string2[i - 1];
+                button.dataset.alt = string2[i - 1].toUpperCase();
+                button.dataset.ru = ruString2[i - 1];
+                button.dataset.ruAlt = ruString2[i - 1].toUpperCase();
+                button.dataset.cmd = false;
+                button.dataset.mod = 'Caps';
+            } else if (i == 11) {
+                button.dataset.key = '[';
+                button.dataset.alt = '{';
+                button.dataset.ru = ruString2[i - 1];
+                button.dataset.ruAlt = ruString2[i - 1].toUpperCase();
+                button.dataset.cmd = false;
+                button.dataset.mod = 'shift';
+                button.dataset.ruMod = 'Caps';
+            } else if (i == 12) {
+                button.dataset.key = ']';
+                button.dataset.alt = '}';
+                button.dataset.ru = ruString2[i - 1];
+                button.dataset.ruAlt = ruString2[i - 1].toUpperCase();
+                button.dataset.cmd = false;
+                button.dataset.mod = 'shift';
+                button.dataset.ruMod = 'Caps';
+            } else if (i == 13) {
+                button.dataset.key = '\\';
+                button.dataset.alt = '|';
+                button.dataset.ru = '\\';
+                button.dataset.ruAlt = '/';
+                button.dataset.cmd = false;
+                button.dataset.mod = 'shift';
+            } else if (i == 14) {
+                button.dataset.key = 'Del';
+                button.dataset.alt = 'Del';
+                button.dataset.ru = 'Del';
+                button.dataset.ruAlt = 'Del';
+                button.dataset.cmd = true;
+                button.dataset.mod = false;
+            }
+        
+        
+            button.append(content)
+        
+            button.classList.add('button');
+            row2.append(button);
+        }
+        return row2;
+    }
+    createThirdRow(){
+        const row3 = document.createElement('div');
+        row3.classList.add('flex-row');
+        this.keyboard.append(row3);
+        for (let i = 0; i < 13; i++) {
+            const button = document.createElement('div');
+            const content = document.createElement('div');
+        
+            if (i == 0) {
+                button.dataset.key = 'CapsLock';
+                button.dataset.alt = 'CapsLock';
+                button.dataset.ru = 'CapsLock';
+                button.dataset.ruAlt = 'CapsLock';
+                button.dataset.cmd = true;
+                button.dataset.mod = false;
+                button.classList.add('double-btn');
+            } else if (i < 10) {
+                //button.innerText = i + ' ';
+                button.dataset.key = string3[i - 1];
+                button.dataset.alt = string3[i - 1].toUpperCase();
+                button.dataset.ru = ruString3[i - 1];
+                button.dataset.ruAlt = ruString3[i - 1].toUpperCase();
+                button.dataset.mod = 'Caps';
+                button.dataset.cmd = false;
+            } else if (i == 10) {
+                button.dataset.key = ';';
+                button.dataset.alt = ':';
+                button.dataset.ru = ruString3[i - 1]
+                button.dataset.ruAlt = ruString3[i - 1].toUpperCase();
+                button.dataset.mod = 'shift';
+                button.dataset.ruMod = 'Caps';
+            } else if (i == 11) {
+                button.dataset.key = "'";
+                button.dataset.alt = '"';
+                button.dataset.ru = ruString3[i - 1];
+                button.dataset.ruAlt = ruString3[i - 1].toUpperCase();
+                button.dataset.mod = 'shift';
+                button.dataset.ruMod = 'Caps';
+            } else {
+                button.dataset.key = 'Enter';
+                button.dataset.alt = 'Enter';
+                button.dataset.ru = 'Enter';
+                button.dataset.ruAlt = 'Enter';
+                button.dataset.cmd = 'true';
+                button.dataset.mod = 'false';
+        
+                button.classList.add('double-btn');
+            }
+        
+            button.append(content)
+        
+            button.classList.add('button');
+            row3.append(button);
+        }
+        return row3;
+    }
+    createFourthRow(){
+        const row4 = document.createElement('div');
+        row4.classList.add('flex-row');
+        this.keyboard.append(row4);
+        for (let i = 0; i < 13; i++) {
+            const button = document.createElement('div');
+            const content = document.createElement('div');
+        
+            if (i == 0) {
+                button.dataset.key = 'Shift';
+                button.dataset.alt = 'Shift';
+                button.dataset.ru = 'Shift';
+                button.dataset.ruAlt = 'Shift';
+                button.dataset.cmd = 'true';
+                button.dataset.mod = 'false';
+                button.classList.add('double-btn');
+            } else if (i < 8) {
+                //button.innerText = i + ' ';
+                button.dataset.key = string4[i - 1];
+                button.dataset.alt = string4[i - 1].toUpperCase();
+                button.dataset.ru = ruString4[i - 1];
+                button.dataset.ruAlt = ruString4[i - 1].toUpperCase();
+                button.dataset.mod = 'Caps';
+                button.dataset.cmd = false;
+        
+            } else if (i == 8) {
+                button.dataset.key = ',';
+                button.dataset.alt = '<';
+                button.dataset.ru = ruString4[i - 1];
+                button.dataset.ruAlt = ruString4[i - 1].toUpperCase();
+                button.dataset.mod = 'shift';
+                button.dataset.cmd = false;
+                button.dataset.ruMod = 'Caps';
+        
+            } else if (i == 9) {
+                button.dataset.key = ".";
+                button.dataset.alt = '>';
+                button.dataset.ru = ruString4[i - 1];
+                button.dataset.ruAlt = ruString4[i - 1].toUpperCase();
+                button.dataset.mod = 'shift';
+                button.dataset.cmd = false;
+                button.dataset.ruMod = 'Caps';
+            } else if (i == 10) {
+                button.dataset.key = "/";
+                button.dataset.alt = '?';
+                button.dataset.ru = '.';
+                button.dataset.ruAlt = ',';
+                button.dataset.mod = 'shift';
+                button.dataset.cmd = false;
+            } else if (i == 11) {
+                button.dataset.key = '\u25b2';
+                button.dataset.alt = '\u25b2';
+                button.dataset.ru = '\u25b2';
+                button.dataset.ruAlt = '\u25b2';
+                button.dataset.mod = false;
+                button.dataset.cmd = true;
+                //button.classList.add('double-btn');
+            } else {
+                button.dataset.key = 'Shift';
+                button.dataset.alt = 'Shift';
+                button.dataset.ru = 'Shift';
+                button.dataset.ruAlt = 'Shift';
+                button.dataset.cmd = 'true';
+                button.dataset.mod = 'false';
+                button.classList.add('double-btn');
+            }
+        
+            button.append(content)
+        
+            button.classList.add('button');
+            row4.append(button);
+        }
+        return row4;
+
+    }
+    createFifthRow(){
+        const row5 = document.createElement('div');
+        row5.classList.add('flex-row');
+        this.keyboard.append(row5);
+        for (let i = 0; i < 9; i++) {
+            const button = document.createElement('div');
+            const content = document.createElement('div');
+        
+            if (i == 0) {
+                button.dataset.key = 'Ctrl';
+                button.dataset.alt = 'Ctrl';
+                button.dataset.ru = 'Ctrl';
+                button.dataset.ruAlt = 'Ctrl';
+                button.dataset.cmd = 'true';
+                button.dataset.mod = 'false';
+        
+            } else if (i == 1) {
+                button.dataset.key = 'Win';
+                button.dataset.alt = 'Win';
+                button.dataset.ru = 'Win';
+                button.dataset.ruAlt = 'Win';
+                button.dataset.cmd = 'true';
+                button.dataset.mod = 'false';
+            } else if (i == 2) {
+                button.dataset.key = 'Alt';
+                button.dataset.alt = 'Alt';
+                button.dataset.ru = 'Alt';
+                button.dataset.ruAlt = 'Alt';
+                button.dataset.cmd = 'true';
+                button.dataset.mod = 'false';
+            } else if (i == 3) {
+                button.dataset.key = 'Space';
+                button.dataset.alt = 'Space';
+                button.dataset.ru = 'Space';
+                button.dataset.ruAlt = 'Space';
+                button.dataset.cmd = 'true';
+                button.dataset.mod = 'false';
+                button.classList.add('space-btn');
+        
+            } else if (i == 4) {
+                button.dataset.key = 'Alt';
+                button.dataset.alt = 'Alt';
+                button.dataset.ru = 'Alt';
+                button.dataset.ruAlt = 'Alt';
+                button.dataset.cmd = 'true';
+                button.dataset.mod = 'false';
+                //button.innerText = '0';
+            } else if (i == 5) {
+                button.dataset.key = "\u25c0";
+                button.dataset.alt = '\u25c0';
+                button.dataset.ru = '\u25c0';
+                button.dataset.ruAlt = '\u25c0';
+                button.dataset.mod = false;
+                button.dataset.cmd = true;
+            } else if (i == 6) {
+                button.dataset.key = "\u25bc";
+                button.dataset.alt = '\u25bc';
+                button.dataset.ru = '\u25bc';
+                button.dataset.ruAlt = '\u25bc';
+                button.dataset.mod = false;
+                button.dataset.cmd = true;
+            } else if (i == 7) {
+                button.dataset.key = '\u25b6';
+                button.dataset.alt = '\u25b6';
+                button.dataset.ru = '\u25b6';
+                button.dataset.ruAlt = '\u25b6';
+                button.dataset.mod = false;
+                button.dataset.cmd = true;
+                //button.classList.add('double-btn');
+            } else {
+                button.dataset.key = 'Ctrl';
+                button.dataset.alt = 'Ctrl';
+                button.dataset.ru = 'Ctrl';
+                button.dataset.ruAlt = 'Ctrl';
+                button.dataset.cmd = 'true';
+                button.dataset.mod = 'false';
+        
+            }
+        
+            button.append(content)
+        
+            button.classList.add('button');
+            row5.append(button);
+        }
+        return row5;
+    }
+}
+
+
+
 const body = document.querySelector('body');
 
 const container = document.createElement('div');
@@ -15,26 +366,18 @@ keyboard.classList.add('flex-column');
 const footer = document.createElement('div');
 footer.innerHTML = '<p>Написано для Windows. Ctrl+Alt переключают язык.</p>'
 
-const row1 = document.createElement('div');
-row1.classList.add('flex-row');
-keyboard.append(row1);
+// const row1 = document.createElement('div');
+// row1.classList.add('flex-row');
+// keyboard.append(row1);
 
-const row2 = document.createElement('div');
-row2.classList.add('flex-row');
-keyboard.append(row2);
 
-const row3 = document.createElement('div');
-row3.classList.add('flex-row');
-keyboard.append(row3);
 
-const row4 = document.createElement('div');
-row4.classList.add('flex-row');
-keyboard.append(row4);
 
-const row5 = document.createElement('div');
-row5.classList.add('flex-row');
-keyboard.append(row5);
-let rows = [row1, row2, row3, row4, row5];
+
+
+
+
+
 
 body.prepend(container);
 
@@ -55,327 +398,9 @@ const ruString2 = 'йцукенгшщзхъ';
 const ruString3 = 'фывапролджэ';
 const ruString4 = 'ячсмитьбю';
 
-// FIRST ROW SETUP
-for (let i = 0; i < 14; i++) {
-    const button = document.createElement('div');
-    const content = document.createElement('div');
-
-    if (i == 0) {
-        button.dataset.key = '`';
-        button.dataset.alt = enAltString1[i];
-        button.dataset.ru = 'ё';
-        button.dataset.ruAlt = 'Ё';
-        button.dataset.cmd = false;
-        button.dataset.mod = 'shift';
-        button.dataset.ruMod = 'Caps';
-    } else if (i < 10) {
-        //button.innerText = i + ' ';
-        button.dataset.key = i + '';
-        button.dataset.alt = enAltString1[i];
-        button.dataset.ru = i + '';
-        button.dataset.ruAlt = ruAltString1[i];
-        button.dataset.cmd = false;
-        button.dataset.mod = 'shift';
-    } else if (i == 10) {
-        button.dataset.key = 0;
-        button.dataset.ru = 0;
-        button.dataset.alt = enAltString1[i];
-        button.dataset.ruAlt = ruAltString1[i]
-        button.dataset.cmd = false;
-        button.dataset.mod = 'shift';
-    } else if (i == 11) {
-        button.dataset.key = '-';
-        button.dataset.ru = '-';
-        button.dataset.alt = enAltString1[i];
-        button.dataset.ruAlt = ruAltString1[i];
-        button.dataset.cmd = false;
-        button.dataset.mod = 'shift';
-    } else if (i == 12) {
-        button.dataset.key = '=';
-        button.dataset.ru = '=';
-        button.dataset.alt = enAltString1[i];
-        button.dataset.ruAlt = ruAltString1[i]; // 
-        button.dataset.cmd = false;
-        button.dataset.mod = 'shift';
-    } else {
-        button.dataset.key = 'Backspace'
-        button.dataset.alt = 'Backspace'
-        button.dataset.ru = 'Backspace'
-        button.dataset.ruAlt = 'Backspace'
-        button.dataset.cmd = true;
-        button.dataset.mod = false;
-
-        button.classList.add('double-btn');
-    }
-
-    button.append(content)
-
-    button.classList.add('button');
-    row1.append(button);
-}
-// SECOND ROW SETUP
-for (let i = 0; i < 15; i++) {
-    const button = document.createElement('div');
-    const content = document.createElement('div');
-
-    if (i == 0) {
-        button.dataset.key = 'Tab';
-        button.dataset.alt = 'Tab';
-        button.dataset.ru = 'Tab';
-        button.dataset.ruAlt = 'Tab';
-        button.dataset.cmd = true;
-        button.dataset.mod = false;
-    } else if (i < 11) {
-        //button.innerText = i + ' ';
-        button.dataset.key = string2[i - 1];
-        button.dataset.alt = string2[i - 1].toUpperCase();
-        button.dataset.ru = ruString2[i - 1];
-        button.dataset.ruAlt = ruString2[i - 1].toUpperCase();
-        button.dataset.cmd = false;
-        button.dataset.mod = 'Caps';
-    } else if (i == 11) {
-        button.dataset.key = '[';
-        button.dataset.alt = '{';
-        button.dataset.ru = ruString2[i - 1];
-        button.dataset.ruAlt = ruString2[i - 1].toUpperCase();
-        button.dataset.cmd = false;
-        button.dataset.mod = 'shift';
-        button.dataset.ruMod = 'Caps';
-    } else if (i == 12) {
-        button.dataset.key = ']';
-        button.dataset.alt = '}';
-        button.dataset.ru = ruString2[i - 1];
-        button.dataset.ruAlt = ruString2[i - 1].toUpperCase();
-        button.dataset.cmd = false;
-        button.dataset.mod = 'shift';
-        button.dataset.ruMod = 'Caps';
-    } else if (i == 13) {
-        button.dataset.key = '\\';
-        button.dataset.alt = '|';
-        button.dataset.ru = '\\';
-        button.dataset.ruAlt = '/';
-        button.dataset.cmd = false;
-        button.dataset.mod = 'shift';
-    } else if (i == 14) {
-        button.dataset.key = 'Del';
-        button.dataset.alt = 'Del';
-        button.dataset.ru = 'Del';
-        button.dataset.ruAlt = 'Del';
-        button.dataset.cmd = true;
-        button.dataset.mod = false;
-    }
-
-
-    button.append(content)
-
-    button.classList.add('button');
-    row2.append(button);
-}
-
-// THIRD ROW SETUP
-for (let i = 0; i < 13; i++) {
-    const button = document.createElement('div');
-    const content = document.createElement('div');
-
-    if (i == 0) {
-        button.dataset.key = 'CapsLock';
-        button.dataset.alt = 'CapsLock';
-        button.dataset.ru = 'CapsLock';
-        button.dataset.ruAlt = 'CapsLock';
-        button.dataset.cmd = true;
-        button.dataset.mod = false;
-        button.classList.add('double-btn');
-    } else if (i < 10) {
-        //button.innerText = i + ' ';
-        button.dataset.key = string3[i - 1];
-        button.dataset.alt = string3[i - 1].toUpperCase();
-        button.dataset.ru = ruString3[i - 1];
-        button.dataset.ruAlt = ruString3[i - 1].toUpperCase();
-        button.dataset.mod = 'Caps';
-        button.dataset.cmd = false;
-    } else if (i == 10) {
-        button.dataset.key = ';';
-        button.dataset.alt = ':';
-        button.dataset.ru = ruString3[i - 1]
-        button.dataset.ruAlt = ruString3[i - 1].toUpperCase();
-        button.dataset.mod = 'shift';
-        button.dataset.ruMod = 'Caps';
-    } else if (i == 11) {
-        button.dataset.key = "'";
-        button.dataset.alt = '"';
-        button.dataset.ru = ruString3[i - 1];
-        button.dataset.ruAlt = ruString3[i - 1].toUpperCase();
-        button.dataset.mod = 'shift';
-        button.dataset.ruMod = 'Caps';
-    } else {
-        button.dataset.key = 'Enter';
-        button.dataset.alt = 'Enter';
-        button.dataset.ru = 'Enter';
-        button.dataset.ruAlt = 'Enter';
-        button.dataset.cmd = 'true';
-        button.dataset.mod = 'false';
-
-        button.classList.add('double-btn');
-    }
-
-    button.append(content)
-
-    button.classList.add('button');
-    row3.append(button);
-}
-
-// 5 ROW SETUP 
-for (let i = 0; i < 13; i++) {
-    const button = document.createElement('div');
-    const content = document.createElement('div');
-
-    if (i == 0) {
-        button.dataset.key = 'Shift';
-        button.dataset.alt = 'Shift';
-        button.dataset.ru = 'Shift';
-        button.dataset.ruAlt = 'Shift';
-        button.dataset.cmd = 'true';
-        button.dataset.mod = 'false';
-        button.classList.add('double-btn');
-    } else if (i < 8) {
-        //button.innerText = i + ' ';
-        button.dataset.key = string4[i - 1];
-        button.dataset.alt = string4[i - 1].toUpperCase();
-        button.dataset.ru = ruString4[i - 1];
-        button.dataset.ruAlt = ruString4[i - 1].toUpperCase();
-        button.dataset.mod = 'Caps';
-        button.dataset.cmd = false;
-
-    } else if (i == 8) {
-        button.dataset.key = ',';
-        button.dataset.alt = '<';
-        button.dataset.ru = ruString4[i - 1];
-        button.dataset.ruAlt = ruString4[i - 1].toUpperCase();
-        button.dataset.mod = 'shift';
-        button.dataset.cmd = false;
-        button.dataset.ruMod = 'Caps';
-
-    } else if (i == 9) {
-        button.dataset.key = ".";
-        button.dataset.alt = '>';
-        button.dataset.ru = ruString4[i - 1];
-        button.dataset.ruAlt = ruString4[i - 1].toUpperCase();
-        button.dataset.mod = 'shift';
-        button.dataset.cmd = false;
-        button.dataset.ruMod = 'Caps';
-    } else if (i == 10) {
-        button.dataset.key = "/";
-        button.dataset.alt = '?';
-        button.dataset.ru = '.';
-        button.dataset.ruAlt = ',';
-        button.dataset.mod = 'shift';
-        button.dataset.cmd = false;
-    } else if (i == 11) {
-        button.dataset.key = '\u25b2';
-        button.dataset.alt = '\u25b2';
-        button.dataset.ru = '\u25b2';
-        button.dataset.ruAlt = '\u25b2';
-        button.dataset.mod = false;
-        button.dataset.cmd = true;
-        //button.classList.add('double-btn');
-    } else {
-        button.dataset.key = 'Shift';
-        button.dataset.alt = 'Shift';
-        button.dataset.ru = 'Shift';
-        button.dataset.ruAlt = 'Shift';
-        button.dataset.cmd = 'true';
-        button.dataset.mod = 'false';
-        button.classList.add('double-btn');
-    }
-
-    button.append(content)
-
-    button.classList.add('button');
-    row4.append(button);
-}
-
-for (let i = 0; i < 9; i++) {
-    const button = document.createElement('div');
-    const content = document.createElement('div');
-
-    if (i == 0) {
-        button.dataset.key = 'Ctrl';
-        button.dataset.alt = 'Ctrl';
-        button.dataset.ru = 'Ctrl';
-        button.dataset.ruAlt = 'Ctrl';
-        button.dataset.cmd = 'true';
-        button.dataset.mod = 'false';
-
-    } else if (i == 1) {
-        button.dataset.key = 'Win';
-        button.dataset.alt = 'Win';
-        button.dataset.ru = 'Win';
-        button.dataset.ruAlt = 'Win';
-        button.dataset.cmd = 'true';
-        button.dataset.mod = 'false';
-    } else if (i == 2) {
-        button.dataset.key = 'Alt';
-        button.dataset.alt = 'Alt';
-        button.dataset.ru = 'Alt';
-        button.dataset.ruAlt = 'Alt';
-        button.dataset.cmd = 'true';
-        button.dataset.mod = 'false';
-    } else if (i == 3) {
-        button.dataset.key = 'Space';
-        button.dataset.alt = 'Space';
-        button.dataset.ru = 'Space';
-        button.dataset.ruAlt = 'Space';
-        button.dataset.cmd = 'true';
-        button.dataset.mod = 'false';
-        button.classList.add('space-btn');
-
-    } else if (i == 4) {
-        button.dataset.key = 'Alt';
-        button.dataset.alt = 'Alt';
-        button.dataset.ru = 'Alt';
-        button.dataset.ruAlt = 'Alt';
-        button.dataset.cmd = 'true';
-        button.dataset.mod = 'false';
-        //button.innerText = '0';
-    } else if (i == 5) {
-        button.dataset.key = "\u25c0";
-        button.dataset.alt = '\u25c0';
-        button.dataset.ru = '\u25c0';
-        button.dataset.ruAlt = '\u25c0';
-        button.dataset.mod = false;
-        button.dataset.cmd = true;
-    } else if (i == 6) {
-        button.dataset.key = "\u25bc";
-        button.dataset.alt = '\u25bc';
-        button.dataset.ru = '\u25bc';
-        button.dataset.ruAlt = '\u25bc';
-        button.dataset.mod = false;
-        button.dataset.cmd = true;
-    } else if (i == 7) {
-        button.dataset.key = '\u25b6';
-        button.dataset.alt = '\u25b6';
-        button.dataset.ru = '\u25b6';
-        button.dataset.ruAlt = '\u25b6';
-        button.dataset.mod = false;
-        button.dataset.cmd = true;
-        //button.classList.add('double-btn');
-    } else {
-        button.dataset.key = 'Ctrl';
-        button.dataset.alt = 'Ctrl';
-        button.dataset.ru = 'Ctrl';
-        button.dataset.ruAlt = 'Ctrl';
-        button.dataset.cmd = 'true';
-        button.dataset.mod = 'false';
-
-    }
-
-    button.append(content)
-
-    button.classList.add('button');
-    row5.append(button);
-}
-// EN ru
-
+const krows = new KeyboardRows(keyboard);
+let rows = [krows.createFirstRow(), krows.createSecondRow(),
+    krows.createThirdRow(), krows.createFourthRow(), krows.createFifthRow()];
 
 let langEn;
 if (localStorage.getItem('lang') == null) {
@@ -764,12 +789,5 @@ textArea.addEventListener('keyup', function (e) {
     // textArea.value += e.key;
 })
 textArea.addEventListener('keypress', function (e) {
-    e.preventDefault()
-    // textArea.value += e.key;
+    e.preventDefault()    
 })
-
-// let a = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'; //1072-1103 1105
-// //1040-1071 1025
-// for (let i = 0; i < a.length; i++){
-//     console.log(a[i].toUpperCase().charCodeAt(0));
-// }
