@@ -626,6 +626,7 @@ function standartizeKbInput(e) {
   return null;
 }
 body.addEventListener('keydown', (e) => {
+  e.preventDefault();
   if (e.altKey && e.ctrlKey) {
     langEn = !langEn;
     localStorage.setItem('lang', langEn);
@@ -649,6 +650,7 @@ body.addEventListener('keydown', (e) => {
 });
 
 body.addEventListener('keyup', (e) => {
+  e.preventDefault();
   const button = standartizeKbInput(e);
 
   if (button && button instanceof HTMLDivElement && button.classList.contains('button')) {
@@ -708,14 +710,4 @@ body.addEventListener('mouseout', (e) => {
       button.classList.remove('pressed');
     }
   }
-});
-
-textArea.addEventListener('keydown', (e) => {
-  e.preventDefault();
-});
-textArea.addEventListener('keyup', (e) => {
-  e.preventDefault();
-});
-textArea.addEventListener('keypress', (e) => {
-  e.preventDefault();
 });
