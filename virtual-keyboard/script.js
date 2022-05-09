@@ -253,6 +253,7 @@ class KeyboardRows {
         button.dataset.cmd = 'true';
         button.dataset.mod = 'false';
         button.classList.add('double-btn');
+        button.classList.add('ShiftRight');
       }
 
       button.append(content);
@@ -307,6 +308,7 @@ class KeyboardRows {
         button.dataset.ruAlt = 'Alt';
         button.dataset.cmd = 'true';
         button.dataset.mod = 'false';
+        button.classList.add('AltRight');
       } else if (i === 5) {
         button.dataset.key = '\u25c0';
         button.dataset.alt = '\u25c0';
@@ -335,6 +337,7 @@ class KeyboardRows {
         button.dataset.ruAlt = 'Ctrl';
         button.dataset.cmd = 'true';
         button.dataset.mod = 'false';
+        button.classList.add('CtrlRight');
       }
 
       button.append(content);
@@ -477,7 +480,7 @@ const kbToButton = [{
   ShiftLeft: 'Shift',
 },
 {
-  ShiftRight: 'Shift',
+  ShiftRight: 'ShiftRight',
 },
 {
   ControlLeft: 'Ctrl',
@@ -600,6 +603,12 @@ function standartizeKbInput(e) {
     result = code.replace('Digit', '');
   } else if (code.includes('Key')) {
     result = code.replace('Key', '').toLowerCase();
+  } else if (code === 'ShiftRight') {
+    return document.querySelector('.ShiftRight');
+  } else if (code === 'AltRight') {
+    return document.querySelector('.AltRight');
+  } else if (code === 'ControlRight') {
+    return document.querySelector('.CtrlRight');
   } else {
     for (let i = 0; i < kbToButton.length; i += 1) {
       if (code in kbToButton[i]) {
