@@ -688,7 +688,6 @@ body.addEventListener('mouseup', (e) => {
     if (button.dataset.key === 'Shift') {
       isShiftEnabled = false;
       DrawKeys();
-      
     }
   }
 });
