@@ -666,6 +666,10 @@ body.addEventListener('mousedown', (e) => {
     isCapsEnabled = !isCapsEnabled;
     DrawKeys();
   }
+  if (e.target.dataset.key === 'Shift') {
+    isShiftEnabled = !isShiftEnabled;
+    DrawKeys();
+  }
   handle(e.target);
 });
 body.addEventListener('mouseup', (e) => {
