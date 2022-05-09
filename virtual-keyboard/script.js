@@ -667,7 +667,7 @@ body.addEventListener('mousedown', (e) => {
     DrawKeys();
   }
   if (e.target.dataset.key === 'Shift') {
-    isShiftEnabled = !isShiftEnabled;
+    isShiftEnabled = true;
     DrawKeys();
   }
   handle(e.target);
@@ -684,6 +684,11 @@ body.addEventListener('mouseup', (e) => {
     } else if (button.dataset.key === 'CapsLock' && isCapsEnabled === false) {
       button.classList.remove('highlight');
       button.classList.remove('pressed');
+    }
+    if (button.dataset.key === 'Shift') {
+      isShiftEnabled = false;
+      DrawKeys();
+      
     }
   }
 });
