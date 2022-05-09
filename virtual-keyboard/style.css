@@ -66,7 +66,7 @@ textarea {
 }
 
 .button {
-  width: 3em;
+  width: 3.5em;
   height: calc(0.5rem + 4.5vh);
   text-align: center;
   display: -webkit-box;
@@ -94,7 +94,7 @@ textarea {
 }
 
 .double-btn {
-  width: 6em;
+  width: 7em;
 }
 
 .highlight {

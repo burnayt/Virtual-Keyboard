@@ -595,6 +595,7 @@ function handle(button) {
       textArea.selectionEnd = start + 1;
     }
   }
+  textArea.focus();
 }
 function standartizeKbInput(e) {
   const { code } = e;
