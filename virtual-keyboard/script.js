@@ -437,8 +437,6 @@ function DrawKeys() {
 
 DrawKeys();
 
-textArea.value = 'asklfjsalgnsafnwouihl ';
-
 const kbToButton = [{
   Minus: '-',
 },

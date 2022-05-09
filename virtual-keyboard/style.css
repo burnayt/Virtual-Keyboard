@@ -87,6 +87,10 @@ textarea {
   border-radius: 10px;
   -webkit-box-shadow: 0 9px darkblue;
           box-shadow: 0 9px darkblue;
+  -webkit-transition: background-color 0.25s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  transition: background-color 0.25s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  transition: box-shadow 0.25s, transform 0.25s, background-color 0.25s;
+  transition: box-shadow 0.25s, transform 0.25s, background-color 0.25s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
 }
 
 .double-btn {
@@ -94,7 +98,7 @@ textarea {
 }
 
 .highlight {
-  background-color: aqua;
+  background-color: rgba(22, 118, 131, 0.897);
 }
 
 .pressed {
