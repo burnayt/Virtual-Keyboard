@@ -1,0 +1,90 @@
+$btn-width : 3em;
+$btn-height : calc(0.5rem + 4.5vh);
+$font-size: 20px;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: calc(0.25rem + 1.25vw);
+}
+
+body {
+    background-color: gray;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+textarea {
+    margin-top: 0;
+    width: 85%;
+    height: 35vh;
+    border: 2px solid black;
+
+}
+
+.flex {
+    display: flex;
+    //justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: .5vw;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: .5vw;
+}
+
+.keyboard {
+    font-size: $font-size;
+    width: 75vw;
+    margin: 0 auto;
+    background-color: rgb(202, 202, 181);
+    padding: 1em;
+    color: antiquewhite;
+
+}
+
+.button {
+    width: $btn-width;
+    height: $btn-height;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 9px darkblue;
+    transition: box-shadow 0.25s, transform 0.25s, background-color 0.25s;
+}
+
+.double-btn {
+    width: 2*$btn-width;
+}
+
+.highlight {
+    background-color: rgba(22, 118, 131, 0.897);
+}
+
+.pressed {
+    box-shadow: 0 4px darkblue;
+    transform: translateY(4px);
+}
+
+.space-btn {
+    width: 45vw;
+    font-size: 0px;
+}
